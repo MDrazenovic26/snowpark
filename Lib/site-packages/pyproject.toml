@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "snowpark-session"
+version = "0.1.1"
+description = ""
+authors = ["Carlos D. Escobar-Valbuena <carlosdavidescobar@gmail.com>"]
+readme = "README.md"
+packages = [{include = "*"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+snowflake-snowpark-python = [
+    {version = "1.5.1", python = ">=3.6,<3.10"}
+]
+azure-ai-ml = "^1.8.0"
+azureml-mlflow = "^1.52.0"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
